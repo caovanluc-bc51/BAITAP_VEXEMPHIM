@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { datGheAction } from "../../store/actions/datGheAction";
 
 class Ghe extends Component {
   renderTable = () => {
@@ -14,10 +15,7 @@ class Ghe extends Component {
                 this.props.element.danhSachGhe[0].dangChon && "btn-success"
               } ${this.props.element.danhSachGhe[0].daDat && "btn-warning"}`}
               onClick={() =>
-                this.props.dispatch({
-                  type: "DAT_GHE",
-                  payload: this.props.element.danhSachGhe[0],
-                })
+                this.props.dispatch(datGheAction(this.props.element.danhSachGhe[0]))
               }
             >
               {this.props.element.danhSachGhe[0].soGhe}
@@ -29,10 +27,7 @@ class Ghe extends Component {
                 this.props.element.danhSachGhe[1].dangChon && "btn-success"
               } ${this.props.element.danhSachGhe[1].daDat && "btn-warning"}`}
               onClick={() =>
-                this.props.dispatch({
-                  type: "DAT_GHE",
-                  payload: this.props.element.danhSachGhe[1],
-                })
+                this.props.dispatch(datGheAction(this.props.element.danhSachGhe[1]))
               }
             >
               {this.props.element.danhSachGhe[1].soGhe}
@@ -44,10 +39,7 @@ class Ghe extends Component {
                 this.props.element.danhSachGhe[2].dangChon && "btn-success"
               } ${this.props.element.danhSachGhe[2].daDat && "btn-warning"}`}
               onClick={() =>
-                this.props.dispatch({
-                  type: "DAT_GHE",
-                  payload: this.props.element.danhSachGhe[2],
-                })
+                this.props.dispatch(datGheAction(this.props.element.danhSachGhe[2]))
               }
             >
               {this.props.element.danhSachGhe[2].soGhe}
@@ -59,10 +51,7 @@ class Ghe extends Component {
                 this.props.element.danhSachGhe[3].dangChon && "btn-success"
               } ${this.props.element.danhSachGhe[3].daDat && "btn-warning"}`}
               onClick={() =>
-                this.props.dispatch({
-                  type: "DAT_GHE",
-                  payload: this.props.element.danhSachGhe[3],
-                })
+                this.props.dispatch(datGheAction(this.props.element.danhSachGhe[3]))
               }
             >
               {this.props.element.danhSachGhe[3].soGhe}
@@ -74,10 +63,7 @@ class Ghe extends Component {
                 this.props.element.danhSachGhe[4].dangChon && "btn-success"
               } ${this.props.element.danhSachGhe[4].daDat && "btn-warning"}`}
               onClick={() =>
-                this.props.dispatch({
-                  type: "DAT_GHE",
-                  payload: this.props.element.danhSachGhe[4],
-                })
+                this.props.dispatch(datGheAction(this.props.element.danhSachGhe[4]))
               }
             >
               {this.props.element.danhSachGhe[4].soGhe}
@@ -89,10 +75,7 @@ class Ghe extends Component {
                 this.props.element.danhSachGhe[5].dangChon && "btn-success"
               } ${this.props.element.danhSachGhe[5].daDat && "btn-warning"}`}
               onClick={() =>
-                this.props.dispatch({
-                  type: "DAT_GHE",
-                  payload: this.props.element.danhSachGhe[5],
-                })
+                this.props.dispatch(datGheAction(this.props.element.danhSachGhe[5]))
               }
             >
               {this.props.element.danhSachGhe[5].soGhe}
@@ -104,10 +87,7 @@ class Ghe extends Component {
                 this.props.element.danhSachGhe[6].dangChon && "btn-success"
               } ${this.props.element.danhSachGhe[6].daDat && "btn-warning"}`}
               onClick={() =>
-                this.props.dispatch({
-                  type: "DAT_GHE",
-                  payload: this.props.element.danhSachGhe[6],
-                })
+                this.props.dispatch(datGheAction(this.props.element.danhSachGhe[6]))
               }
             >
               {this.props.element.danhSachGhe[6].soGhe}
@@ -119,10 +99,7 @@ class Ghe extends Component {
                 this.props.element.danhSachGhe[7].dangChon && "btn-success"
               } ${this.props.element.danhSachGhe[7].daDat && "btn-warning"}`}
               onClick={() =>
-                this.props.dispatch({
-                  type: "DAT_GHE",
-                  payload: this.props.element.danhSachGhe[7],
-                })
+                this.props.dispatch(datGheAction(this.props.element.danhSachGhe[7]))
               }
             >
               {this.props.element.danhSachGhe[7].soGhe}
@@ -134,10 +111,7 @@ class Ghe extends Component {
                 this.props.element.danhSachGhe[8].dangChon && "btn-success"
               } ${this.props.element.danhSachGhe[8].daDat && "btn-warning"}`}
               onClick={() =>
-                this.props.dispatch({
-                  type: "DAT_GHE",
-                  payload: this.props.element.danhSachGhe[8],
-                })
+                this.props.dispatch(datGheAction(this.props.element.danhSachGhe[8]))
               }
             >
               {this.props.element.danhSachGhe[8].soGhe}
@@ -149,10 +123,7 @@ class Ghe extends Component {
                 this.props.element.danhSachGhe[9].dangChon && "btn-success"
               } ${this.props.element.danhSachGhe[9].daDat && "btn-warning"}`}
               onClick={() =>
-                this.props.dispatch({
-                  type: "DAT_GHE",
-                  payload: this.props.element.danhSachGhe[9],
-                })
+                this.props.dispatch(datGheAction(this.props.element.danhSachGhe[9]))
               }
             >
               {this.props.element.danhSachGhe[9].soGhe}
@@ -165,10 +136,7 @@ class Ghe extends Component {
                 this.props.element.danhSachGhe[10].dangChon && "btn-success"
               } ${this.props.element.danhSachGhe[10].daDat && "btn-warning"}`}
               onClick={() =>
-                this.props.dispatch({
-                  type: "DAT_GHE",
-                  payload: this.props.element.danhSachGhe[10],
-                })
+                this.props.dispatch(datGheAction(this.props.element.danhSachGhe[10]))
               }
             >
               {this.props.element.danhSachGhe[10].soGhe}
@@ -181,10 +149,7 @@ class Ghe extends Component {
                 this.props.element.danhSachGhe[11].dangChon && "btn-success"
               } ${this.props.element.danhSachGhe[11].daDat && "btn-warning"}`}
               onClick={() =>
-                this.props.dispatch({
-                  type: "DAT_GHE",
-                  payload: this.props.element.danhSachGhe[11],
-                })
+                this.props.dispatch(datGheAction(this.props.element.danhSachGhe[11]))
               }
             >
               {this.props.element.danhSachGhe[11].soGhe}

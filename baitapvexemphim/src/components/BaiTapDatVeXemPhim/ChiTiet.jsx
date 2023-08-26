@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { datGheAction } from "../../store/actions/datGheAction";
 
 class ChiTiet extends Component {
   renderContent = () => {
@@ -15,10 +16,7 @@ class ChiTiet extends Component {
               <span
                 className="cursor-pointer text-danger"
                 onClick={() =>
-                  this.props.dispatch({
-                    type: "DAT_GHE",
-                    payload: ghe,
-                  })
+                  this.props.dispatch(datGheAction(ghe))
                 }
               >
                 X
@@ -32,6 +30,7 @@ class ChiTiet extends Component {
   tongTien = () => {
     const numberFormat = new Intl.NumberFormat("VN-vn");
     const tong = this.props.danhSachGhe.map((element) => {
+      // eslint-disable-next-line array-callback-return
       return element.danhSachGhe.map((ghe) => {
         if (ghe.dangChon === true) {
           return ghe;
