@@ -1,5 +1,5 @@
 import data from "../../data/danhSachGhe.json";
-import { DAT_GHE } from "../types/datGheType";
+import { DAT_GHE, PAY_MENT } from "../types/datGheType";
 const DEFAULT_STATE = { danhSachGhe: data };
 export const datGheReducer = (state = DEFAULT_STATE, action) => {
   // eslint-disable-next-line default-case
@@ -227,7 +227,7 @@ export const datGheReducer = (state = DEFAULT_STATE, action) => {
     }
     
     // eslint-disable-next-line no-fallthrough
-    case "PAY_MENT": {
+    case PAY_MENT: {
       const data = JSON.parse(JSON.stringify(state.danhSachGhe));
       if (
         action.payload[1].length !== 0 ||
