@@ -15,9 +15,7 @@ class ChiTiet extends Component {
             <td>
               <span
                 className="cursor-pointer text-danger"
-                onClick={() =>
-                  this.props.dispatch(datGheAction(ghe))
-                }
+                onClick={() => this.props.dispatch(datGheAction(ghe))}
               >
                 X
               </span>
@@ -27,6 +25,7 @@ class ChiTiet extends Component {
       });
     });
   };
+  
   tongTien = () => {
     const numberFormat = new Intl.NumberFormat("VN-vn");
     const tong = this.props.danhSachGhe.map((element) => {
@@ -79,6 +78,21 @@ class ChiTiet extends Component {
             <tr className="text-center text-danger font-weight-bold">
               <td>Tổng tiền</td>
               <td>{this.tongTien()} vnđ</td>
+              <td>
+                <button
+                  onClick={() =>
+                    this.props.dispatch({
+                      type: "PAY_MENT",
+                      payload: this.props.danhSachGhe.map((element)=>{
+                        return element.danhSachGhe;
+                      }),
+                    })
+                  }
+                  className="btn btn-success"
+                >
+                  Thanh Toán
+                </button>
+              </td>
             </tr>
           </tfoot>
         </table>

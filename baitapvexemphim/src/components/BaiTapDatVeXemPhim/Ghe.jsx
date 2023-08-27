@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { datGheAction } from "../../store/actions/datGheAction";
 
 class Ghe extends Component {
+  
   renderTable = () => {
     // console.log(this.props.element.danhSachGhe[0]);
     if (this.props.element.hang !== "") {
@@ -13,7 +14,8 @@ class Ghe extends Component {
             <button
               className={`ghe ${
                 this.props.element.danhSachGhe[0].dangChon && "btn-success"
-              } ${this.props.element.danhSachGhe[0].daDat && "btn-warning"}`}
+              } ${this.props.element.danhSachGhe[0].daDat && "btn-warning" }`} 
+              disabled={this.props.element.danhSachGhe[0].daDat? true : false}     
               onClick={() =>
                 this.props.dispatch(datGheAction(this.props.element.danhSachGhe[0]))
               }
@@ -26,6 +28,7 @@ class Ghe extends Component {
               className={`ghe ${
                 this.props.element.danhSachGhe[1].dangChon && "btn-success"
               } ${this.props.element.danhSachGhe[1].daDat && "btn-warning"}`}
+              disabled={this.props.element.danhSachGhe[1].daDat? true : false} 
               onClick={() =>
                 this.props.dispatch(datGheAction(this.props.element.danhSachGhe[1]))
               }
@@ -38,6 +41,7 @@ class Ghe extends Component {
               className={`ghe ${
                 this.props.element.danhSachGhe[2].dangChon && "btn-success"
               } ${this.props.element.danhSachGhe[2].daDat && "btn-warning"}`}
+              disabled={this.props.element.danhSachGhe[2].daDat? true : false} 
               onClick={() =>
                 this.props.dispatch(datGheAction(this.props.element.danhSachGhe[2]))
               }
@@ -50,6 +54,7 @@ class Ghe extends Component {
               className={`ghe ${
                 this.props.element.danhSachGhe[3].dangChon && "btn-success"
               } ${this.props.element.danhSachGhe[3].daDat && "btn-warning"}`}
+              disabled={this.props.element.danhSachGhe[3].daDat? true : false}
               onClick={() =>
                 this.props.dispatch(datGheAction(this.props.element.danhSachGhe[3]))
               }
@@ -62,6 +67,7 @@ class Ghe extends Component {
               className={`ghe ${
                 this.props.element.danhSachGhe[4].dangChon && "btn-success"
               } ${this.props.element.danhSachGhe[4].daDat && "btn-warning"}`}
+              disabled={this.props.element.danhSachGhe[4].daDat? true : false}
               onClick={() =>
                 this.props.dispatch(datGheAction(this.props.element.danhSachGhe[4]))
               }
@@ -74,6 +80,7 @@ class Ghe extends Component {
               className={`ghe ${
                 this.props.element.danhSachGhe[5].dangChon && "btn-success"
               } ${this.props.element.danhSachGhe[5].daDat && "btn-warning"}`}
+              disabled={this.props.element.danhSachGhe[5].daDat? true : false}
               onClick={() =>
                 this.props.dispatch(datGheAction(this.props.element.danhSachGhe[5]))
               }
@@ -86,6 +93,7 @@ class Ghe extends Component {
               className={`ghe ${
                 this.props.element.danhSachGhe[6].dangChon && "btn-success"
               } ${this.props.element.danhSachGhe[6].daDat && "btn-warning"}`}
+              disabled={this.props.element.danhSachGhe[6].daDat? true : false}
               onClick={() =>
                 this.props.dispatch(datGheAction(this.props.element.danhSachGhe[6]))
               }
@@ -98,6 +106,7 @@ class Ghe extends Component {
               className={`ghe ${
                 this.props.element.danhSachGhe[7].dangChon && "btn-success"
               } ${this.props.element.danhSachGhe[7].daDat && "btn-warning"}`}
+              disabled={this.props.element.danhSachGhe[7].daDat? true : false}
               onClick={() =>
                 this.props.dispatch(datGheAction(this.props.element.danhSachGhe[7]))
               }
@@ -110,6 +119,7 @@ class Ghe extends Component {
               className={`ghe ${
                 this.props.element.danhSachGhe[8].dangChon && "btn-success"
               } ${this.props.element.danhSachGhe[8].daDat && "btn-warning"}`}
+              disabled={this.props.element.danhSachGhe[8].daDat? true : false}
               onClick={() =>
                 this.props.dispatch(datGheAction(this.props.element.danhSachGhe[8]))
               }
@@ -122,6 +132,7 @@ class Ghe extends Component {
               className={`ghe ${
                 this.props.element.danhSachGhe[9].dangChon && "btn-success"
               } ${this.props.element.danhSachGhe[9].daDat && "btn-warning"}`}
+              disabled={this.props.element.danhSachGhe[9].daDat? true : false}
               onClick={() =>
                 this.props.dispatch(datGheAction(this.props.element.danhSachGhe[9]))
               }
@@ -131,10 +142,10 @@ class Ghe extends Component {
           </td>
           <td>
             <button
-              disabled={this.props.element.danhSachGhe[10].daDat}
               className={`ghe ${
                 this.props.element.danhSachGhe[10].dangChon && "btn-success"
               } ${this.props.element.danhSachGhe[10].daDat && "btn-warning"}`}
+              disabled={this.props.element.danhSachGhe[10].daDat? true : false}
               onClick={() =>
                 this.props.dispatch(datGheAction(this.props.element.danhSachGhe[10]))
               }
@@ -144,10 +155,10 @@ class Ghe extends Component {
           </td>
           <td>
             <button
-              disabled={this.props.element.danhSachGhe[11].daDat}
               className={`ghe ${
                 this.props.element.danhSachGhe[11].dangChon && "btn-success"
               } ${this.props.element.danhSachGhe[11].daDat && "btn-warning"}`}
+              disabled={this.props.element.danhSachGhe[11].daDat? true : false}
               onClick={() =>
                 this.props.dispatch(datGheAction(this.props.element.danhSachGhe[11]))
               }
