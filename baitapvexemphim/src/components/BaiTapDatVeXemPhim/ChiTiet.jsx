@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { datGheAction } from "../../store/actions/datGheAction";
+import { datGheAction, payMentAction } from "../../store/actions/datGheAction";
 
 class ChiTiet extends Component {
   renderContent = () => {
@@ -25,7 +25,7 @@ class ChiTiet extends Component {
       });
     });
   };
-  
+
   tongTien = () => {
     const numberFormat = new Intl.NumberFormat("VN-vn");
     const tong = this.props.danhSachGhe.map((element) => {
@@ -81,12 +81,13 @@ class ChiTiet extends Component {
               <td>
                 <button
                   onClick={() =>
-                    this.props.dispatch({
-                      type: "PAY_MENT",
-                      payload: this.props.danhSachGhe.map((element)=>{
-                        return element.danhSachGhe;
-                      }),
-                    })
+                    this.props.dispatch(
+                      payMentAction(
+                        this.props.danhSachGhe.map((element) => {
+                          return element.danhSachGhe;
+                        })
+                      )
+                    )
                   }
                   className="btn btn-success"
                 >
